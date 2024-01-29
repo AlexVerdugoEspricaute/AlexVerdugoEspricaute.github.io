@@ -1,0 +1,351 @@
+.resume,
+.projects, 
+.contact{
+    display: none;
+}
+
+.resume > h1{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 1vh;
+}
+.resume .div, .contact .div{
+    width: 45px;
+    height: 5px;
+    border-radius: 2px;
+    background: #52dee5;
+    margin: 3.5vh 0 4.5vh 0;
+}
+
+/*---------------------resume----------------------*/
+
+.resume .education, .resume .experience{
+    width: 100%;
+    display: flex; 
+    gap: 2vw;
+}
+.resume .education div:first-child, .resume .experience div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.resume .education div:first-child ion-icon, 
+.resume .experience div:first-child ion-icon{
+    padding: 13px 14px;
+    font-size: 18px;
+    color: #52dee5;
+    border-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+.resume .education div:first-child .point,
+.resume .experience div:first-child .point{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #52dee5;
+    border: 4px solid rgba(53, 53, 53, 0.9);
+}
+.resume .education div:first-child .line1{
+    width: 1px;
+    height: calc(1.5vh + 26px);
+    height: 4.8vh;
+    background: rgba(214, 214, 214, 0.1);
+}
+.resume .education div:first-child .line2{
+    width: 1px;
+    height: 13vh;
+    height: calc(3vh + 48px + 16px);
+    background: rgba(214, 214, 214, 0.1);
+}
+/*-----------------last child-------------------*/
+.resume .education div:last-child > div{
+    margin-top: 3vh;
+}
+.resume .education div:last-child h1,
+.resume .experience div:last-child h1{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 1vh 0 3.8vh 0;
+}
+.resume .education div:last-child h2,
+.resume .experience div:last-child h2{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 32px;
+}
+.resume .education div:last-child span,
+.resume .experience div:last-child span{
+    color: #52dee5;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.resume .education div:last-child p,
+.resume .experience div:last-child p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #d6d6d6;
+}
+
+/*--------------------------*/
+.resume .experience{
+    margin-top: 5vh;
+
+}
+.resume .experience > div:first-child .line1{
+    width: 1px;
+    height: calc(4vh + 16px - 13px);
+    height: 4.5vh;
+    background: rgba(214, 214, 214, 0.1);
+}
+
+.resume .experience > div:first-child .line2{
+    width: 1px;
+    height: 12.8vh;
+    height: calc(3.2vh + 66px);
+    background: rgba(214, 214, 214, 0.1);
+}
+
+.resume .experience > div:first-child .line3{
+    width: 1px;
+    height: 24vh;
+    height: calc(3vh + 136px);
+    background: rgba(214, 214, 214, 0.1);
+}
+
+.resume .experience > div:last-child .div2{
+    margin: 3vh 0;
+}
+
+.resume .experience > div:last-child p span{
+    color: #d6d6d6;
+    font-weight: bold;
+}
+
+/*----------------------Resume CV-------------------------*/
+.resume > div:last-child{
+    margin: 12vh 0 8vh 0;
+    display: flex;
+    justify-content: center;
+}
+.resume > div:last-child a{
+    gap: 5px;
+    display: flex;
+    color: #52dee5;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 2.5vh 4vw;
+    border-radius: 10px;
+    justify-content: center; 
+    background: #323233;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    background: radial-gradient(circle at 0% 100%, #303033 20%, #38393a 40%, #3b3c41 100%);
+}
+.resume > div:last-child a ion-icon{
+    color: #52dee5;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (max-width: 900px) and (min-width: 480px){
+    .resume > div:last-child{
+        margin: 8vh 0 4vh 0;
+        display: flex;
+        justify-content: center;
+    }
+    .resume > div:last-child a{
+        padding: 2.5vh 15vw;
+    }
+}
+
+
+@media (max-width: 480px){
+    .resume .menu{
+        left: 0;
+        right: 0;
+        gap: 3vw;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        backdrop-filter: blur(8px);
+        border-radius: 12px 12px 0 0;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .resume .menu a{
+        padding: 19px 0;
+        font-size: 11px;
+        color: rgba(214, 214, 214, 0.8);
+    }
+    /*------------------------.resume------------------------*/
+    .resume > h1, .projects > h1, .contact > h1{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 20px;
+        margin-top: 0vh;
+    }
+    .resume .div, .projects .div, .contact .div{
+        width: 32px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 1.5vh 0 4vh 0;
+    }
+    
+    /*---------------------resume----------------------*/
+    .resume .education, .resume .experience{
+        gap: 3.5vw;
+    }
+    .resume .education div:first-child ion-icon, 
+    .resume .experience div:first-child ion-icon{
+        padding: 10px 11px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 10px;
+    }
+    .resume .education div:first-child .point,
+    .resume .experience div:first-child .point{
+        width: 12px;
+        height: 12px;
+        border: 3px solid rgba(53, 53, 53, 0.9);
+    }
+    .resume .education div:first-child .line1{
+        height: 3.5vh;
+    }
+    .resume .education div:first-child .line2{
+        height: 13vh;
+        height: calc(2vh + 14px * 3 + 22px * 2);
+    }
+    /*-----------------last child-------------------*/
+    .resume .education div:last-child > div{
+        margin-top: 2vh;
+    }
+    .resume .education div:last-child h1,
+    .resume .experience div:last-child h1{
+        font-size: 18px;
+        margin: 0.5vh 0 3vh 0;
+    }
+    .resume .education div:last-child h2,
+    .resume .experience div:last-child h2{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .resume .experience div:last-child div .h2{
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .resume .education div:last-child span,
+    .resume .experience div:last-child span{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .resume .education div:last-child p,
+    .resume .experience div:last-child p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    /*-------------------------------------------------------------------------------------------------*/
+    .resume .experience{
+        margin-top: 5vh;
+    
+    }
+    .resume .experience > div:first-child .line1{
+        height: calc(4vh + 16px - 13px);
+        height: 3.5vh;
+    }
+    
+    .resume .experience > div:first-child .line2{
+        height: 12.8vh;
+        height: calc(2vh + 14px * 3 + 22px * 3 - 11px);
+    }
+    
+    .resume .experience > div:first-child .line3{
+        width: 1px;
+        height: 24vh;
+        height: calc(2vh + 14px * 4 + 22px * 5 + 2px);
+        background: rgba(214, 214, 214, 0.1);
+    }
+    
+    .resume .experience > div:last-child .div2{
+        margin: 3vh 0;
+    }
+    
+    .resume .experience > div:last-child p span{
+        color: #d6d6d6;
+        font-weight: bold;
+    }
+    /*----------------------resume download----------------------*/
+    .resume > div:last-child{
+        margin: 8vh 0 2vh 0;
+        display: flex;
+        justify-content: center;
+    }
+    .resume > div:last-child a{
+        gap: 5px;
+        display: flex;
+        width: 100%;
+        color: #52dee5;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 2vh 3vw;
+        border-radius: 18px;
+        margin: 0vh 5vw;
+        justify-content: center;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .resume > div:last-child a ion-icon{
+        color: #52dee5;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 400px){   
+    .resume .experience > div:first-child .line3{
+        width: 1px;
+        height: 24vh;
+        height: calc(2vh + 14px * 6 + 22px * 5 - 6px);
+        background: rgba(214, 214, 214, 0.1);
+    }
+  
+}
+
+@media (max-width: 372px){
+    .resume .education div:first-child .line1{
+        height: 3.5vh;
+    }
+    .resume .education div:first-child .line2{
+        height: 13vh;
+        height: calc(2vh + 14px * 3 + 22px * 2);
+    }
+    /*-----------------last child-------------------*/
+    .resume .experience > div:first-child .line1{
+        height: calc(4vh + 16px - 13px);
+        height: 3.5vh;
+    }
+    
+    .resume .experience > div:first-child .line2{
+        height: 12.8vh;
+        height: calc(2vh + 14px * 3 + 22px * 3 - 11px);
+    }
+    
+    .resume .experience > div:first-child .line3{
+        width: 1px;
+        height: 24vh;
+        height: calc(2vh + 14px * 6 + 22px * 6 + 8px );
+        background: rgba(214, 214, 214, 0.1);
+    }
+  
+}

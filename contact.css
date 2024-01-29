@@ -1,0 +1,81 @@
+.contact > h2{
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contact > h3{
+    font-weight: 500;
+    color: rgba(214, 214, 214, 0.8);
+}
+.contact > div:last-child{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+    gap: 4%;
+    padding: 0 2%;
+}
+.contact > div:last-child a{
+    gap: 5px;
+    width: 48%;
+    padding: 20px 0;
+    display: flex;
+    margin-top: 5vh;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+}
+
+.contact > div:last-child .whatsapp{
+    background: #25D366;
+}
+.contact > div:last-child .gmail{
+    background: #c71610;
+}
+.contact > div:last-child .github{
+    background: #333;
+}
+.contact > div:last-child .linkedin{
+    background: #0077b5;
+}
+.contact > div:last-child .insta{
+    background: #cc2366;
+
+}
+.contact > div:last-child .twitter{
+    background: #1DA1F2;
+}
+
+@media (max-width: 480px){
+    .contact > h2{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .contact > h3{
+        font-size: 16px;
+    }
+
+    .contact > div:last-child{
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1vh 0 0 0;
+        margin-bottom: 0;
+    }
+    .contact > div:last-child a{
+        gap: 4px;
+        width: 96%;
+        padding: 2vh 0;
+        margin: 2vh 2% 0 2%;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        color: #fafafa;
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+}
+
+
+

@@ -1,0 +1,34 @@
+
+@media (max-width: 480px){
+    .presentation2 > div:last-child.active{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
