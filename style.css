@@ -9,7 +9,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: url('img/loader4.gif') 50% 50% no-repeat rgb(0,0,0);
 }
 html{
     box-sizing: border-box;
@@ -53,7 +52,7 @@ ul{
 }
 .container{
     width: 100%;
-    padding: 10vh 4vw;
+    padding: 7vh 4vw;
 }
 .container2{
     width: 100%;

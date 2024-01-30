@@ -53,6 +53,12 @@
     height: 4.8vh;
     background: rgba(214, 214, 214, 0.1);
 }
+.resume .education div:first-child .line3{
+    width: 1px;
+    height: 13vh;
+    height: calc(3vh + 48px + 16px);
+    background: rgba(214, 214, 214, 0.1);
+}
 .resume .education div:first-child .line2{
     width: 1px;
     height: 13vh;
@@ -104,15 +110,15 @@
 
 .resume .experience > div:first-child .line2{
     width: 1px;
-    height: 12.8vh;
-    height: calc(3.2vh + 66px);
+    height: 20.8vh;
+    height: calc(10vh + 66px);
     background: rgba(214, 214, 214, 0.1);
 }
 
 .resume .experience > div:first-child .line3{
     width: 1px;
     height: 24vh;
-    height: calc(3vh + 136px);
+    height: calc(9vh + 136px);
     background: rgba(214, 214, 214, 0.1);
 }
 
