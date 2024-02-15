@@ -152,13 +152,13 @@
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     background: radial-gradient(circle at 0% 100%, #303033 20%, #38393a 40%, #3b3c41 100%);
     filter: drop-shadow(0 0 1em #000000aa);
+    transition: transform 0.5s;
 }
 
 .resume > div:last-child a:hover{
     transition: 0.5s;
     filter: drop-shadow(0 0 1em #52dee5);
-    cursor:pointer;
-    
+    transform: scale(1.05) ;
 }
 
 .resume > div:last-child a ion-icon{
@@ -269,98 +269,107 @@
         line-height: 22px;
     }
     
-    /*-------------------------------------------------------------------------------------------------*/
-    .resume .experience{
-        margin-top: 5vh;
-    
-    }
-    .resume .experience > div:first-child .line1{
-        height: calc(4vh + 16px - 13px);
-        height: 3.5vh;
-    }
-    
-    .resume .experience > div:first-child .line2{
-        height: 12.8vh;
-        height: calc(2vh + 14px * 3 + 22px * 3 - 11px);
-    }
-    
-    .resume .experience > div:first-child .line3{
-        width: 1px;
-        height: 24vh;
-        height: calc(2vh + 14px * 4 + 22px * 5 + 2px);
-        background: rgba(214, 214, 214, 0.1);
-    }
-    
-    .resume .experience > div:last-child .div2{
-        margin: 3vh 0;
-    }
-    
-    .resume .experience > div:last-child p span{
-        color: #d6d6d6;
-        font-weight: bold;
-    }
-    /*----------------------resume download----------------------*/
-    .resume > div:last-child{
-        margin: 8vh 0 2vh 0;
-        display: flex;
-        justify-content: center;
-    }
-    .resume > div:last-child a{
-        gap: 5px;
-        display: flex;
-        width: 100%;
-        color: #52dee5;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 2vh 3vw;
-        border-radius: 18px;
-        margin: 0vh 5vw;
-        justify-content: center;
-        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.15);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .resume > div:last-child a ion-icon{
-        color: #52dee5;
-        font-size: 20px;
-        font-weight: 400;
-    }
+/*-------------------------------------------------------------------------------------------------*/
+/* Ajustes para la sección de experiencia en diferentes tamaños de pantalla */
+
+.resume .experience {
+    margin-top: 5vh;
 }
 
-@media (max-width: 400px){   
-    .resume .experience > div:first-child .line3{
+/* Configuración para la primera línea de conexión en la experiencia */
+.resume .experience > div:first-child .line1 {
+    height: calc(4vh + 16px - 13px);
+    height: 3.5vh;
+}
+
+/* Configuración para la segunda línea de conexión en la experiencia */
+.resume .experience > div:first-child .line2 {
+    height: 12.8vh;
+    height: calc(2vh + 14px * 3 + 22px * 3 - 11px);
+}
+
+/* Configuración para la tercera línea de conexión en la experiencia */
+.resume .experience > div:first-child .line3 {
+    width: 1px;
+    height: 24vh;
+    height: calc(2vh + 14px * 4 + 22px * 5 + 2px);
+    background: rgba(214, 214, 214, 0.1);
+}
+
+/* Estilos para el último elemento dentro de la sección de experiencia */
+.resume .experience > div:last-child .div2 {
+    margin: 3vh 0;
+}
+
+/* Estilos para el texto dentro del último elemento de la sección de experiencia */
+.resume .experience > div:last-child p span {
+    color: #d6d6d6;
+    font-weight: bold;
+}
+
+/* Configuración para el botón de descarga en la sección de resumen */
+.resume > div:last-child {
+    margin: 8vh 0 2vh 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para el botón de descarga en la sección de resumen */
+.resume > div:last-child a {
+    gap: 5px;
+    display: flex;
+    width: 100%;
+    color: #52dee5;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 2vh 3vw;
+    border-radius: 18px;
+    margin: 0vh 5vw;
+    justify-content: center;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para el icono dentro del botón de descarga */
+.resume > div:last-child a ion-icon {
+    color: #52dee5;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (max-width: 400px) {
+    /* Ajustes para dispositivos con ancho máximo de 400px */
+    .resume .experience > div:first-child .line3 {
         width: 1px;
         height: 24vh;
         height: calc(2vh + 14px * 6 + 22px * 5 - 6px);
         background: rgba(214, 214, 214, 0.1);
     }
-  
 }
 
-@media (max-width: 372px){
-    .resume .education div:first-child .line1{
+@media (max-width: 372px) {
+    /* Ajustes para dispositivos con ancho máximo de 372px */
+    .resume .education div:first-child .line1 {
         height: 3.5vh;
     }
-    .resume .education div:first-child .line2{
+    .resume .education div:first-child .line2 {
         height: 13vh;
         height: calc(2vh + 14px * 3 + 22px * 2);
     }
-    /*-----------------last child-------------------*/
-    .resume .experience > div:first-child .line1{
+    /* Configuración para el último elemento de la sección de experiencia en dispositivos muy pequeños */
+    .resume .experience > div:first-child .line1 {
         height: calc(4vh + 16px - 13px);
         height: 3.5vh;
     }
-    
-    .resume .experience > div:first-child .line2{
+    .resume .experience > div:first-child .line2 {
         height: 12.8vh;
         height: calc(2vh + 14px * 3 + 22px * 3 - 11px);
     }
-    
-    .resume .experience > div:first-child .line3{
+    .resume .experience > div:first-child .line3 {
         width: 1px;
         height: 24vh;
         height: calc(2vh + 14px * 6 + 22px * 6 + 8px );
         background: rgba(214, 214, 214, 0.1);
     }
-  
 }
