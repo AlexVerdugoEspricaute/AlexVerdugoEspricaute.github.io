@@ -62,7 +62,9 @@ ul{
 /*--------------presentation-----------------*/
 .presentation{
     width: 21vw;  
+    font-size: 30px;
 }
+
 .presentation2{
     width: 100%;
     height: auto;
@@ -72,6 +74,7 @@ ul{
     position: sticky;
     top: 0;
 }
+
 .presentation2 > div:first-child{
     display: flex;
     flex-direction: column;
@@ -285,8 +288,7 @@ ul{
     gap: 2.5vh;
 }
 .technologies div div img{
-    width: 130px;
-    
+    width: 90px;
 }
 .technologies div div span{
     font-size: 18px;
@@ -563,7 +565,7 @@ ul{
         gap: 1.4vh;
     }
     .technologies div div img{
-        width: 110px;
+        width: 90px;
     }
     .technologies div div span{
         font-size: 16px;
@@ -825,7 +827,7 @@ ul{
         gap: 1.4vh;
     }
     .technologies div div img{
-        width: 110px;
+        width: 90px;
     }
     .technologies div div span{
         font-size: 16px;
