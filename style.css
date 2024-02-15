@@ -718,9 +718,9 @@ ul{
         display: flex;
         position: fixed;
         justify-content: center;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(15px);
         border-radius: 12px 12px 0 0;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(0, 0, 0, 0.7);
     }
     .boxes .menu a{
         padding: 19px 0;
