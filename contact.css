@@ -40,7 +40,7 @@
 .contact > div:last-child a:hover {
     transition: 0.5s; /* Transición de medio segundo */
     filter:drop-shadow(0 0 1em #52dee5); /* Sombra al pasar el mouse */
-    transform: scale(1.05) ;  /* cambiar porte al posar el mouse*/
+    transform: scale(1.05);  /* cambiar porte al posar el mouse*/
 }
 
 /* Estilos para los diferentes tipos de enlaces dentro del último div hijo de la sección de contacto */
@@ -70,13 +70,15 @@
 
 /* Estilos para dispositivos con un ancho máximo de 480px */
 @media (max-width: 480px) {
-    .contact > h2 {
+    .contact > h2,h1,p {
         font-size: 16px; /* Tamaño de fuente reducido para dispositivos móviles */
         font-weight: 700; /* Grosor de la fuente */
+        text-align: center;
     }
     
     .contact > h3 {
         font-size: 16px; /* Tamaño de fuente reducido para dispositivos móviles */
+    
     }
 
     .contact > div:last-child {
@@ -96,6 +98,15 @@
         justify-content: center; /* Alinear elementos horizontalmente */
         color: #fafafa; /* Color del texto */
         box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        transition: transform 0.5s;
+
+        
+    }
+    .contact > div:last-child a:hover{
+        cursor: pointer;
+        transition: 0.5s;
+        transform: scale(1.05);
+        filter:drop-shadow(0 0 1em #52dee5);
     }
 }
 
