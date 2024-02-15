@@ -26,24 +26,23 @@ html{
 }
 body{
     width: 100%;
-    background: radial-gradient(circle at 100% 0%, rgb(31, 56, 122) 0%, rgb(3, 0, 54) 40%, rgb(1, 0, 48) 60%);
-    background: #03000e;
-    background: #0f0f0f;
-    background: #0d0d0d;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 body::-webkit-scrollbar {
     width: 12px;         
 }
-  
+
 body::-webkit-scrollbar-track {  
     background: #1a1919;   
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #3B4264;  
-  background-image: linear-gradient(to top,#8e6de7,#5dbeff);
-  border-radius: 20px;        
-  border: 3px solid #1a1919;
+    background-color: #3B4264;  
+    background-image: linear-gradient(to top,#8e6de7,#5dbeff);
+    border-radius: 20px;        
+    border: 3px solid #1a1919;
 }
 
 a{text-decoration: none;}
@@ -175,7 +174,7 @@ ul{
 }
 .aboutme p{
     margin-bottom: 2vh;
- 
+
 }
 .boxes .menu{
     top: 0;
@@ -261,6 +260,7 @@ ul{
 .technologies{
     width: 100%;
     margin-bottom: 3vh;
+    overflow: hidden;
 }
 .technologies h1{
     font-size: 24px;
@@ -269,13 +269,14 @@ ul{
 }
 .technologies > div{
     gap: 4.6vw;
-    width: 96%;
+    width: 95%;
     display: flex;
     margin: 0 2%;
     overflow: hidden;
     flex-wrap: nowrap;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
+    
 }
 .technologies div div{
     display: flex;
@@ -285,6 +286,7 @@ ul{
 }
 .technologies div div img{
     width: 130px;
+    
 }
 .technologies div div span{
     font-size: 18px;

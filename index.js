@@ -23,7 +23,7 @@ window.addEventListener('scroll', function()  {
     }
 });
 
-//-----------------Menu-----------------
+// -----------------Menu-----------------
 
 var btnContainer = document.querySelector(".menu");  
 

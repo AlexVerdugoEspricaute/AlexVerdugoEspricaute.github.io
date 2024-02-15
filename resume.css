@@ -151,7 +151,16 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     background: radial-gradient(circle at 0% 100%, #303033 20%, #38393a 40%, #3b3c41 100%);
+    filter: drop-shadow(0 0 1em #000000aa);
 }
+
+.resume > div:last-child a:hover{
+    transition: 0.5s;
+    filter: drop-shadow(0 0 1em #52dee5);
+    cursor:pointer;
+    
+}
+
 .resume > div:last-child a ion-icon{
     color: #52dee5;
     font-size: 20px;

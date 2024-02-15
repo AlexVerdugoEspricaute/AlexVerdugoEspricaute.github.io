@@ -26,6 +26,12 @@
     align-items: center;
     justify-content: center;
     color: #fafafa;
+    filter: drop-shadow(0 0 1em #000000aa);
+}
+
+.contact > div:last-child a:hover{
+    transition: 0.5s;
+    filter:drop-shadow(0 0 1em #52dee5);
 }
 
 .contact > div:last-child .whatsapp{
