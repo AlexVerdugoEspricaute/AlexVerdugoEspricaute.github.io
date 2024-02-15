@@ -24,7 +24,7 @@
 /* Estilos para los enlaces dentro del último div hijo de la sección de contacto */
 .contact > div:last-child a {
     gap: 5px; /* Espacio entre elementos internos */
-    width: 47%; /* Ancho de los enlaces */
+    width: 48%; /* Ancho de los enlaces */
     padding: 20px 0; /* Relleno superior e inferior */
     display: flex; /* Mostrar elementos como flexbox */
     margin-top: 5vh; /* Margen superior */
@@ -33,13 +33,14 @@
     justify-content: center; /* Alinear elementos horizontalmente */
     color: #fafafa; /* Color del texto */
     filter: drop-shadow(0 0 1em #000000aa); /* Sombra */
+    transition: transform 0.5s;
 }
 
 /* Estilos al pasar el mouse por encima de los enlaces */
 .contact > div:last-child a:hover {
     transition: 0.5s; /* Transición de medio segundo */
     filter:drop-shadow(0 0 1em #52dee5); /* Sombra al pasar el mouse */
-    width: 48%; /* Ancho aumentado al pasar el mouse */
+    transform: scale(1.05) ;  /* cambiar porte al posar el mouse*/
 }
 
 /* Estilos para los diferentes tipos de enlaces dentro del último div hijo de la sección de contacto */

@@ -78,12 +78,13 @@
     background: linear-gradient(to bottom, #ffffff, #e2d8ea);  /* Gradiente de fondo */
     border: 2px solid rgba(167, 168, 217, 0.02); /* Borde del enlace */
     filter: drop-shadow(0 0 1em #050505 ); /* Sombra */
+    transition: transform 0.5s;
 }
 
 .projects > div:last-child > div a:hover {
     transition: 0.5s; /* Duración de la transición */
     filter: drop-shadow(0 0 1em #52dee5); /* Sombra al hacer hover */
-    width: 81%; /* Ancho del enlace al hacer hover */
+    transform: scale(1.05) ;  /* cambiar porte al posar el mouse*/
 }
 
 /* Estilos para los iconos de los enlaces de los proyectos */
