@@ -123,8 +123,14 @@ ul{
     flex-direction: column;
     font-size: 14px;
 }
-.presentation2 > div:last-child ul li div span{color: rgba(214, 214, 214, 0.7);}
-.presentation2 > div:last-child ul li div a{color: #fafafa;}
+.presentation2 > div:last-child ul li div span{
+    color: rgba(214, 214, 214, 0.7);
+}
+
+.presentation2 > div:last-child ul li div a{
+    color: #fafafa;    
+}
+
 .presentation2 > div:last-child ul li ion-icon{
     color: #52dee5;
     padding: 12px;
@@ -134,13 +140,40 @@ ul{
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+
 .presentation2 > div:last-child > div{
     display: flex;
     justify-content: space-between;
     width: 66%;
     margin: 5vh 17% 5vh 17%;
 } 
-.presentation2 > div:last-child > div ion-icon{color: #d6d6d6;size: 18px;}
+
+.presentation2 > div a:hover ion-icon.whatsapp {
+    color:#25D366;
+    size: 18px;
+    transition: 0.5s;
+}
+.presentation2 > div a:hover ion-icon.mail {
+    color:#db4256;
+    size: 18px;
+    transition: 0.5s;
+}
+.presentation2 > div a:hover ion-icon.github {
+    color:#000000;
+    size: 18px;
+    transition: 0.5s;
+}
+.presentation2 > div a:hover ion-icon.instagram {
+    color:#C13584;
+    size: 18px;
+    transition: 0.5s;
+}
+.presentation2 > div a:hover ion-icon.linkedin {
+    color:#0077B5;
+    size: 18px;
+    transition: 0.5s;
+}
 
 .presentation > ion-icon{display: none;}
 /*-----------------------------------about---------------------------------------*/
@@ -435,6 +468,12 @@ ul{
         size: 18px;
         font-weight: 400;
     }
+    .presentation2 > div a:hover ion-icon.linkedin, 
+    .presentation2 > div a ion-icon.mail.active{
+        color:#0077B5;
+        size: 18px;
+        transition: 0.5s;
+    }    
 
     .presentation > ion-icon{
         display: flex;
