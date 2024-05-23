@@ -1,0 +1,30 @@
+/* Estilos para dispositivos con un ancho máximo de 480px */
+@media (max-width: 480px) {
+    /* Estilos para el último div hijo con la clase 'active' dentro de '.presentation2' */
+    .presentation2 > div:last-child.active {
+        display: flex; /* Muestra el elemento como flexbox */
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        height: auto; /* Altura automática, permitiendo que el contenido determine la altura */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

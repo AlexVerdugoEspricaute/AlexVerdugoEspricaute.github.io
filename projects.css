@@ -1,0 +1,127 @@
+/* Estilos para la sección de proyectos */
+
+/* Configuración del contenedor principal de los proyectos */
+.projects > div:last-child {
+    gap: 2vw; /* Espacio entre elementos */
+    width: 100%; /* Ancho completo del contenedor */
+    display: flex; /* Mostrar como flexbox */
+    flex-wrap: wrap; /* Permitir envolver los elementos en múltiples líneas */
+    justify-content: space-evenly; /* Distribución uniforme de los elementos con espacios iguales */
+}
+
+/* Ajustes para los elementos dentro del contenedor de proyectos */
+.projects > div:last-child > div:last-child {
+    margin-bottom: 2vh; /* Margen inferior para el último elemento */
+}
+
+.projects > div:last-child > div {
+    width: 300px; /* Ancho fijo para los elementos */
+    width: 28vw; /* Ancho adaptable */
+    display: flex; /* Mostrar como flexbox */
+    margin-top: 1.5vh; /* Margen superior */
+    flex-direction: column; /* Disposición en columna */
+}
+
+/* Estilos para las imágenes de los proyectos */
+.projects > div:last-child > div div {
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura fija para las imágenes */
+    overflow: hidden; /* Ocultar el contenido que sobresale */
+    border-radius: 20px; /* Borde redondeado */
+}
+
+.projects > div:last-child > div div img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: contain, cover; /* Ajuste del tamaño de la imagen */
+    transition: all 0.2s ease-out; /* Transición suave al hacer hover */
+    border-radius: 20px; /* Borde redondeado */
+}
+
+.projects > div:last-child > div div img:hover {
+    transform: scale(1.1); /* Escalar la imagen al hacer hover */
+}
+
+/* Estilos para los títulos de los proyectos */
+.projects > div:last-child > div h1 {
+    font-size: 15px; /* Tamaño de fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    line-height: 20px; /* Altura de línea */
+    margin: 2.5vh 0 0.2vh 5%; /* Margen del título */
+}
+
+/* Estilos para los párrafos de descripción de los proyectos */
+.projects > div:last-child > div p {
+    font-size: 15px; /* Tamaño de fuente */
+    font-weight: 300; /* Grosor de la fuente */
+    line-height: 20px; /* Altura de línea */
+    margin: 0 0 2vh 5%; /* Margen del párrafo */
+    color: rgba(214, 214, 214, 0.7); /* Color del texto */
+}
+
+/* Estilos para los enlaces de los proyectos */
+.projects > div:last-child > div a {
+    gap: 5px; /* Espacio entre elementos internos */
+    width: 80%; /* Ancho del enlace */
+    margin: 0 10% 2vh 10%; /* Margen del enlace */
+    display: flex; /* Mostrar como flexbox */
+    padding: 2vh 0; /* Relleno del enlace */
+    font-size: 15px; /* Tamaño de fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    line-height: 20px; /* Altura de línea */
+    border-radius: 10px; /* Borde redondeado */
+    align-items: center; /* Alineación vertical de elementos */
+    transition: all 0.5s; /* Transición suave */
+    justify-content: center; /* Alineación horizontal de elementos */
+    background: #fff6fc;  /* Fondo del enlace */
+    background: -webkit-linear-gradient(to bottom, #ffffff, #e2d8ea);  /* Gradiente de fondo */
+    background: linear-gradient(to bottom, #ffffff, #e2d8ea);  /* Gradiente de fondo */
+    border: 2px solid rgba(167, 168, 217, 0.02); /* Borde del enlace */
+    filter: drop-shadow(0 0 1em #050505 ); /* Sombra */
+    transition: transform 0.5s;
+}
+
+.projects > div:last-child > div a:hover {
+    transition: 0.5s; /* Duración de la transición */
+    filter: drop-shadow(0 0 1em #52dee5); /* Sombra al hacer hover */
+    transform: scale(1.05) ;  /* cambiar porte al posar el mouse*/
+}
+
+/* Estilos para los iconos de los enlaces de los proyectos */
+.projects > div:last-child > div a ion-icon {
+    color: #11152b; /* Color del icono */
+}
+
+/* Estilos para los textos de los enlaces de los proyectos */
+.projects > div:last-child > div a span {
+    color: #11152b; /* Color del texto */
+}
+
+/* Media queries para dispositivos de diferentes tamaños */
+@media (max-width: 900px) and (min-width: 480px) {
+    .projects > div:last-child > div {
+        width: 90%; /* Ancho del contenedor en dispositivos medianos */
+    }
+    .projects > div:last-child > div div {
+        height: 300px; /* Altura de las imágenes en dispositivos medianos */
+    }
+    .projects > div:last-child > div:last-child {
+        margin-bottom: 0vh; /* Margen inferior del último elemento en dispositivos medianos */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects > div:last-child {
+        gap: 5vh; /* Espacio entre elementos en dispositivos pequeños */
+        width: 100%; /* Ancho completo del contenedor en dispositivos pequeños */
+        flex-direction: column; /* Disposición en columna en dispositivos pequeños */
+    }
+    .projects > div:last-child > div:last-child {
+        margin-bottom: 0vh; /* Margen inferior del último elemento en dispositivos pequeños */
+    }
+    .projects > div:last-child > div {
+        width: 100%; /* Ancho completo de los elementos en dispositivos pequeños */
+        display: flex; /* Mostrar como flexbox */
+        margin-top: 0vh; /* Margen superior en */
+    }
+}

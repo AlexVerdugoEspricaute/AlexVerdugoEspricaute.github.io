@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fira+Code&family=Inspiration&family=Inter:wght@300&family=Montserrat:wght@700&family=PT+Mono&family=Poppins:wght@300&family=Roboto:wght@300&family=Shadows+Into+Light&family=Sora:wght@300;400;600;800&display=swap');
+/*fira-code*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fira+Code:wght@300;400&family=Inspiration&family=Inter:wght@300&family=Montserrat:wght@700&family=PT+Mono&family=Poppins:wght@300&family=Roboto:wght@300&family=Shadows+Into+Light&family=Sora:wght@300;400;600;800&display=swap');
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+}
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: "Fira Code",Poppins ,Arial, Helvetica, sans-serif;
+    font-family: Poppins ,Arial, Helvetica, sans-serif;
+    color: #fafafa;
+}
+.titleThecnology{
+    text-align: center
+}
+body{
+    width: 100%;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body::-webkit-scrollbar {
+    width: 12px;         
+}
+
+body::-webkit-scrollbar-track {  
+    background: #1a1919;   
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3B4264;  
+    background-image: linear-gradient(to top,#8e6de7,#5dbeff);
+    border-radius: 20px;        
+    border: 3px solid #1a1919;
+}
+
+a{text-decoration: none;}
+ul{
+    list-style: none;
+}
+.container{
+    width: 100%;
+    padding: 7vh 4vw;
+}
+.container2{
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+}
+
+/*--------------presentation-----------------*/
+.presentation{
+    width: 21vw;  
+    font-size: 30px;
+}
+
+.presentation2{
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+}
+
+.presentation2 > div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+    padding: 9vh 3vw 5vh 3vw;
+    gap: 4vh;
+}
+.presentation2 > div:first-child img{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 12%;
+}
+.presentation2 > div:first-child div h1,.presentation2 > div:first-child div p{
+    text-align: center;
+    color: #fafafa;
+}
+.presentation2 > div:first-child div h1{
+    font-size: 26px;
+    font-weight: 500;
+}
+.presentation2 > div:first-child div p{
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-top: 18px;
+    font-weight: 300;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.presentation2 > div:last-child{
+    padding: 0 2vw;
+}
+.presentation2 > div:last-child ul{
+    width: 100%;
+    padding: 5vh 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.presentation2 > div:last-child ul li{
+    display: flex;
+    gap: 6%;
+    align-items: center;
+    margin-bottom: 10%;
+}
+.presentation2 > div:last-child ul li div{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.presentation2 > div:last-child ul li div span{color: rgba(214, 214, 214, 0.7);}
+.presentation2 > div:last-child ul li div a{color: #fafafa;}
+.presentation2 > div:last-child ul li ion-icon{
+    color: #52dee5;
+    padding: 12px;
+    border-radius: 11px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.presentation2 > div:last-child > div{
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin: 5vh 17% 5vh 17%;
+} 
+.presentation2 > div:last-child > div ion-icon{color: #d6d6d6;size: 18px;}
+
+.presentation > ion-icon{display: none;}
+/*-----------------------------------about---------------------------------------*/
+.boxes{
+    width: auto;
+    position: relative;
+}
+.about,.resume, .contact, .projects{
+    width: 69vw;
+    border-radius: 25px;
+    background: #161d4a;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 5vh 2.4vw;
+}
+
+.aboutme .h11, .projects > h1, .contact > h1{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.aboutme > div, .projects .div, .contact > div:first-child{
+    width: 45px;
+    height: 5px;
+    border-radius: 2px;
+    background: #52dee5;
+    margin: 3vh 0;
+}
+.aboutme .h12{
+    color: #d6d6d6;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.aboutme p{
+    margin-bottom: 2vh;
+
+}
+.boxes .menu{
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 35vw;
+    bottom: auto;
+    margin: auto;
+    z-index: 1000;
+    display: flex;
+    position: absolute;
+    border-radius: 0 25px 0 25px;
+    justify-content: space-evenly;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.boxes .menu a{
+    padding: 19px 0;
+    font-size: 15px;
+    font-weight:bolder;
+    color: rgba(214, 214, 214, 0.8);
+}
+.boxes .menu a:hover, .boxes .menu a.active{
+    color: #52dee5;
+}
+
+/*------------------------------------skills---------------------------------------*/
+.skill{
+    width: 100%;
+}
+.skill > h1{
+    margin: 6vh 0 3vh 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fafafa;
+}
+.skill > div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3%;
+}
+.skill > div > div{
+    gap: 5%;
+    width: 48.5%;
+    padding: 3.5vh 3% 4vh 3%;
+    display: flex;
+    margin-bottom: 3vh;
+    position: relative;
+    align-items: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    background: radial-gradient(circle at 0% 100%, #303033 20%, #38393a 40%, #3b3c41 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.06);/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+}
+
+.skill > div > div img{
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
+}
+.skill > div > div p > span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 38px;
+}
+.skill > div > div p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #d6d6d6;
+    display: flex;
+    flex-direction: column;
+}
+
+/*----------------------circulos----------------------*/
+
+/*-------------------------------technologies--------------------------------*/
+.technologies {
+    width: 100%;
+    margin-bottom: 3vh;
+    overflow: hidden;
+}
+
+.technologies h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 4vh 0 9vh 0;
+}
+
+.technologies > div {
+    gap: 4.6vw;
+    width: 95%;
+    display: flex;
+    margin: 0 2%;
+    flex-wrap: nowrap;
+    white-space: nowrap; /* Asegura que los elementos no se envuelvan */
+    animation: scroll 30s linear infinite; /* Animación de desplazamiento */
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Comienza desde la posición original */
+    }
+    100% {
+        transform: translateX(-100%); /* Desplazamiento total */
+    }
+}
+
+.technologies div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    animation: scroll 1000s linear infinite;
+    width: 200%; /* Doble del tamaño para permitir un desplazamiento continuo */
+    margin: 0 2%;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.technologies div div img {
+    width: 90px;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0); /* Comienza desde la posición original */
+    }
+    to {
+        transform: translateX(-100%); /* Desplazamiento total */
+    }
+}
+
+/* Este estilo es opcional y solo se aplica al primer logotipo */
+.technologies > div img:first-child {
+    animation: fadeIn 0.5s; /* Animación de desvanecimiento para el primer logotipo */
+}
+
+
+.technologies div div span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8vh;
+}
+
+/* Estilos de las barras de desplazamiento */
+.technologies > div::-webkit-scrollbar {
+    width: 6px;
+}
+
+.technologies > div::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+.technologies > div::-webkit-scrollbar-track {
+    background-color: transparentize(#ccc, 0.7);
+    background: #1f2864;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin: 0 8vw;
+}
+
+.technologies > div::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: transparentize(#ccc, 0.5);
+    background: #55cde8;
+}
+
+
+@media (max-width: 1250px) and (min-width: 1000px){
+    .presentation2 > div:last-child ul li:first-child a{
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 1000px) and (min-width: 480px){
+    .container{
+        width: 100%;
+        padding: 2vh 3vw;
+        padding-bottom: calc(2vh + 55px);
+    }
+    .container2{
+        flex-direction: column;
+    }
+    .presentation{
+        width: 100%;
+        border-radius: 15px;
+        position: relative;
+    }
+    .presentation2{
+        border-radius: 20px;   
+    }
+    .presentation2 > div:first-child{
+        flex-direction: row;
+        padding: 1.5vh 4vw;
+        justify-content:start;
+        gap: 4vw;
+    }
+    .presentation2 > div:first-child img{
+        width: 20%;
+        border-radius: 20%;
+        height: 20%;
+    }
+    .presentation2 > div:first-child div h1{
+        font-size: 17px;
+        margin-bottom: 1.5vh;
+    }
+    .presentation2 > div:first-child div p{
+        padding: 3px 3vw;
+        background: rgba(255, 255, 255, 0.1);
+        margin-top: 4px;
+        font-weight: 300;
+        border-radius: 8px;
+        font-size: 11px;
+        width: auto;
+    }
+    .presentation2 > div:last-child{
+        padding: 0 4vw;
+        height: 0px;
+        overflow: hidden;       
+    }
+    .presentation2 > div:last-child ul{
+        padding: 2.5vh 0 0 0;
+    }
+    .presentation2 > div:last-child ul li{
+        gap: 5%;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .presentation2 > div:last-child ul li div{
+        font-size: 11px;
+    }
+    .presentation2 > div:last-child ul li ion-icon{
+        padding: 7px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .presentation2 > div:last-child > div{
+        display: flex;
+        justify-content:flex-start;
+        width: 100%;
+        margin: 5vh 15% 5vh 15%;
+        margin: 0;
+        padding: 2.2vh 0 2.2vh 2vw;
+        gap: 3%;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    } 
+    .presentation2 > div:last-child > div ion-icon{
+        color: #d6d6d6;
+        size: 18px;
+        font-weight: 400;
+    }
+
+    .presentation > ion-icon{
+        display: flex;
+        color: #52dee5;
+        font-size: 14px;
+        position: absolute;
+        font-weight: 400;
+        top: 0;
+        left: auto;
+        right: 0;
+        bottom: auto;
+        border-radius: 0 20px 0 20px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 9px 9px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.05);
+        z-index: 100;
+    }
+    /*------------------about--------------------*/
+    .about,.resume,.projects, .contact{
+        width: 100%;
+        height: auto;
+        margin-top: 1vh;
+        padding: 5vh 3.3vw;
+        border-radius: 20px;
+    } 
+    .aboutme .h11{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+    .aboutme > div{
+        width: 32px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 1.5vh 0 4vh 0;
+    }
+    .aboutme .h12{
+        color: #d6d6d6;
+        font-size: 16px;
+        line-height: 26px;
+        line-height: 0;
+        margin-bottom: 3vh;
+    }
+    .aboutme p{
+        font-size: 14px;
+        line-height: 22px;
+        color: #d6d6d6;
+        font-weight: 300;
+        margin-top: 2vh;
+    }
+
+    .boxes .menu{
+        left: 0;
+        right: 0;
+        gap: 3vw;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        backdrop-filter: blur(8px);
+        border-radius: 12px 12px 0 0;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .boxes .menu a{
+        padding: 19px 0;
+        font-size: 11px;
+        color: rgba(214, 214, 214, 0.8);
+    }
+
+    /*-----------------------------skills----------------------------*/
+    .skill{
+        width: 100%;
+    }
+    .skill > h1{
+        margin: 3vh 0;
+        font-size: 18px;
+    }
+    .skill > div{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3%;
+    }
+    .skill > div > div{
+        width: 48%;
+        flex-direction: column;
+        margin-bottom: 3vh;
+        border-radius: 15px;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+        gap: 5%;
+        padding: 3vh 3%;
+        opacity: 0;
+        transform: translate(-10vh, 0vh);
+        transition: all 1s;
+    }
+    .skill > div > .scroll-content2{
+        transform: translate(10vh, 0vh);
+    }
+    .skill > div > div.visible {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    .skill > div > div img{
+        color: #ffdb70;
+        width: 44px;
+        height: 44px;
+    }
+    .skill > div > div p span{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 35px;
+    }
+    .skill > div > div p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1vw;
+    }
+
+    /*----------------------circulos----------------------*/
+    .skill > div > div > div{
+        top: 0;
+        left: 0;
+        gap: 6px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 1000;
+        display: flex;
+        padding: 3% 4%;
+        position: absolute;
+    }
+    .skill > div > div > div span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    
+    /*-----------------------technologies----------------------*/
+    .technologies{
+        margin-bottom: 0vh;
+    }
+    .technologies h1{
+        font-size: 18px;
+        margin: 1vh 0 6vh 0;
+    }
+    .technologies > div{
+        gap: 10vw;
+        width: 88%;
+        margin: 0 6%;
+    }
+    .technologies div div{
+        gap: 1.4vh;
+    }
+    .technologies div div img{
+        width: 90px;
+    }
+    .technologies div div span{
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 5vh;
+    }
+    
+    .technologies > div::-webkit-scrollbar-track {
+        margin: 0 2vw;
+    }
+
+}
+
+@media (max-width: 480px){
+    .container{
+        width: 100%;
+        padding: 2vh 3vw;
+        padding-bottom: calc(2vh + 55px);
+    }
+    .container2{
+        flex-direction: column;
+    }
+    .presentation{
+        width: 100%;
+        border-radius: 15px;
+        position: relative;
+    }
+    .presentation2{
+        border-radius: 20px;   
+    }
+    .presentation2 > div:first-child{
+        flex-direction: row;
+        padding: 1.5vh 4vw;
+        justify-content:start;
+        gap: 4vw;
+    }
+    .presentation2 > div:first-child img{
+        width: 20%;
+        border-radius: 20%;
+        height: 20%;
+    }
+    .presentation2 > div:first-child div h1{
+        font-size: 17px;
+        margin-bottom: 1.5vh;
+    }
+    .presentation2 > div:first-child div p{
+        padding: 3px 3vw;
+        background: rgba(255, 255, 255, 0.1);
+        margin-top: 4px;
+        font-weight: 300;
+        border-radius: 8px;
+        font-size: 11px;
+        width: auto;
+    }
+    .presentation2 > div:last-child{
+        padding: 0 4vw;
+        height: 0px;
+        overflow: hidden;       
+    }
+    .presentation2 > div:last-child ul{
+        padding: 2.5vh 0 0 0;
+    }
+    .presentation2 > div:last-child ul li{
+        gap: 5%;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .presentation2 > div:last-child ul li div{
+        font-size: 11px;
+    }
+    .presentation2 > div:last-child ul li ion-icon{
+        padding: 7px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .presentation2 > div:last-child > div{
+        display: flex;
+        justify-content:flex-start;
+        width: 100%;
+        margin: 5vh 15% 5vh 15%;
+        margin: 0;
+        padding: 2.2vh 0 2.2vh 2vw;
+        gap: 3%;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    } 
+    .presentation2 > div:last-child > div ion-icon{
+        color: #d6d6d6;
+        size: 18px;
+        font-weight: 400;
+    }
+
+    .presentation > ion-icon{
+        display: flex;
+        color: #52dee5;
+        font-size: 14px;
+        position: absolute;
+        font-weight: 400;
+        top: 0;
+        left: auto;
+        right: 0;
+        bottom: auto;
+        border-radius: 0 20px 0 20px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 9px 9px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.05);
+        z-index: 100;
+    }
+    /*------------------about--------------------*/
+    .about,.resume,.projects, .contact{
+        width: 100%;
+        height: auto;
+        margin-top: 1vh;
+        padding: 5vh 3.3vw;
+        border-radius: 20px;
+    } 
+    .aboutme .h11{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+    .aboutme > div{
+        width: 32px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 1.5vh 0 4vh 0;
+    }
+    .aboutme .h12{
+        color: #d6d6d6;
+        font-size: 16px;
+        line-height: 26px;
+        line-height: 0;
+        margin-bottom: 3vh;
+    }
+    .aboutme p{
+        font-size: 14px;
+        line-height: 22px;
+        color: #d6d6d6;
+        font-weight: 300;
+        margin-top: 2vh;
+    }
+
+    .boxes .menu{
+        left: 0;
+        right: 0;
+        gap: 3vw;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        backdrop-filter: blur(15px);
+        border-radius: 12px 12px 0 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .boxes .menu a{
+        padding: 19px 0;
+        font-size: 11px;
+        color: rgba(214, 214, 214, 0.8);
+    }
+
+    /*-----------------------------skills----------------------------*/
+    .skill{
+        width: 100%;
+    }
+    .skill > h1{
+        margin: 3vh 0;
+        font-size: 18px;
+    }
+    .skill > div{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3%;
+    }
+    .skill > div > div{
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 3vh;
+        border-radius: 15px;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+        gap: 5%;
+        padding: 3vh 3%;
+        background: radial-gradient(circle at 0% 100%, #2a2d3e 0%,#33374c 20%, #363a50 40%, #3e435d 100%);
+        background: rgba(255,255,255, 0.05);
+        background: radial-gradient(circle at 0% 100%, #3f4046 0%,#414349 20%, #3e3f42 40%, #48494f 100%);
+        background: radial-gradient(circle at 0% 100%, #303033 20%, #38393a 40%, #3b3c41 100%);
+        opacity: 0;
+        transform: translate(-10vh, 0vh);
+        transition: all 1s;
+    }
+    .skill > div > .scroll-content2{
+        transform: translate(10vh, 0vh);
+    }
+    .skill > div > div.visible {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    .skill > div > div img{
+        color: #ffdb70;
+        width: 44px;
+        height: 44px;
+    }
+    .skill > div > div p span{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 35px;
+    }
+    .skill > div > div p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1vw;
+    }
+
+    /*----------------------circulos----------------------*/
+    .skill > div > div > div{
+        top: 0;
+        left: 0;
+        gap: 6px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 1000;
+        display: flex;
+        padding: 3% 4%;
+        position: absolute;
+    }
+    .skill > div > div > div span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    
+    /*-----------------------technologies----------------------*/
+    .technologies{
+        margin-bottom: 0vh;
+    }
+    .technologies h1{
+        font-size: 18px;
+        margin: 1vh 0 6vh 0;
+    }
+    .technologies > div{
+        gap: 10vw;
+        width: 88%;
+        margin: 0 6%;
+    }
+    .technologies div div{
+        gap: 1.4vh;
+    }
+    .technologies div div img{
+        width: 90px;
+    }
+    .technologies div div span{
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 5vh;
+    }
+    
+    .technologies > div::-webkit-scrollbar-track {
+        margin: 0 2vw;
+    }
+
+}
+
+

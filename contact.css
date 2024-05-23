@@ -1,0 +1,112 @@
+/* Estilos para el encabezado de nivel 2 en la sección de contacto */
+.contact > h2 {
+    color: #fafafa; /* Color del texto */
+    font-size: 24px; /* Tamaño de la fuente */
+    font-weight: 600; /* Grosor de la fuente */
+}
+
+/* Estilos para el encabezado de nivel 3 en la sección de contacto */
+.contact > h3 {
+    font-weight: 500; /* Grosor de la fuente */
+    color: rgba(214, 214, 214, 0.8); /* Color del texto con transparencia */
+}
+
+/* Estilos para el último div hijo de la sección de contacto */
+.contact > div:last-child {
+    width: 100%; /* Ancho completo del contenedor */
+    display: flex; /* Mostrar elementos como flexbox */
+    flex-wrap: wrap; /* Permitir el ajuste de elementos a múltiples líneas */
+    margin-bottom: 2vh; /* Margen inferior */
+    gap: 4%; /* Espacio entre elementos */
+    padding: 0 2%; /* Relleno izquierdo y derecho */
+}
+
+/* Estilos para los enlaces dentro del último div hijo de la sección de contacto */
+.contact > div:last-child a {
+    gap: 5px; /* Espacio entre elementos internos */
+    width: 48%; /* Ancho de los enlaces */
+    padding: 20px 0; /* Relleno superior e inferior */
+    display: flex; /* Mostrar elementos como flexbox */
+    margin-top: 5vh; /* Margen superior */
+    border-radius: 10px; /* Radio de borde */
+    align-items: center; /* Alinear elementos verticalmente */
+    justify-content: center; /* Alinear elementos horizontalmente */
+    color: #fafafa; /* Color del texto */
+    filter: drop-shadow(0 0 1em #000000aa); /* Sombra */
+    transition: transform 0.5s;
+}
+
+/* Estilos al pasar el mouse por encima de los enlaces */
+.contact > div:last-child a:hover {
+    transition: 0.5s; /* Transición de medio segundo */
+    filter:drop-shadow(0 0 1em #52dee5); /* Sombra al pasar el mouse */
+    transform: scale(1.05);  /* cambiar porte al posar el mouse*/
+}
+
+/* Estilos para los diferentes tipos de enlaces dentro del último div hijo de la sección de contacto */
+.contact > div:last-child .whatsapp {
+    background: #075e54; /* Color de fondo para WhatsApp */
+}
+
+.contact > div:last-child .gmail {
+    background: #c71610; /* Color de fondo para Gmail */
+}
+
+.contact > div:last-child .github {
+    background: #333333 ; /* Color de fondo para GitHub */
+}
+
+.contact > div:last-child .linkedin {
+    background: #0077b5; /* Color de fondo para LinkedIn */
+}
+
+.contact > div:last-child .insta {
+    background: #cc2366; /* Color de fondo para Instagram */
+}
+
+.contact > div:last-child .twitter {
+    background: #1DA1F2; /* Color de fondo para Twitter */
+}
+
+/* Estilos para dispositivos con un ancho máximo de 480px */
+@media (max-width: 480px) {
+    .contact > h2,h1,p {
+        font-size: 16px; /* Tamaño de fuente reducido para dispositivos móviles */
+        font-weight: 700; /* Grosor de la fuente */
+        text-align: center;
+    }
+    
+    .contact > h3 {
+        font-size: 16px; /* Tamaño de fuente reducido para dispositivos móviles */
+    
+    }
+
+    .contact > div:last-child {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        justify-content: space-around; /* Distribución uniforme de elementos en el eje principal */
+        padding: 1vh 0 0 0; /* Relleno */
+        margin-bottom: 0; /* Elimina el margen inferior */
+    }
+    
+    .contact > div:last-child a {
+        gap: 4px; /* Espacio entre elementos internos */
+        width: 96%; /* Ancho de los enlaces */
+        padding: 2vh 0; /* Relleno superior e inferior */
+        margin: 2vh 2% 0 2%; /* Margen */
+        border-radius: 10px; /* Radio de borde */
+        align-items: center; /* Alinear elementos verticalmente */
+        justify-content: center; /* Alinear elementos horizontalmente */
+        color: #fafafa; /* Color del texto */
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        transition: transform 0.5s;
+
+        
+    }
+    .contact > div:last-child a:hover{
+        cursor: pointer;
+        transition: 0.5s;
+        transform: scale(1.05);
+        filter:drop-shadow(0 0 1em #52dee5);
+    }
+}
+
