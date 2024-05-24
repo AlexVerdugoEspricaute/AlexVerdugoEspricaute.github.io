@@ -25,6 +25,7 @@ html{
     text-align: center
 }
 body{
+    font-family: "Fira Code", "Poppins", Arial, Helvetica, sans-serif;
     width: 100%;
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
@@ -83,11 +84,20 @@ ul{
     padding: 9vh 3vw 5vh 3vw;
     gap: 4vh;
 }
-.presentation2 > div:first-child img{
+.presentation2 > div:first-child img {
     width: 10vw;
     height: 10vw;
     border-radius: 12%;
+    object-fit: contain, cover; /* Ajuste del tamaño de la imagen */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Somra blanca en todas las direcciones */
+    transition: all 0.4s ease-out;
 }
+
+.presentation2 > div:first-child img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 15px rgba(0, 0, 10, 0.4); /* Sombra hacia abajo y hacia la derecha en hover */
+}
+
 .presentation2 > div:first-child div h1,.presentation2 > div:first-child div p{
     text-align: center;
     color: #fafafa;
@@ -123,8 +133,14 @@ ul{
     flex-direction: column;
     font-size: 14px;
 }
-.presentation2 > div:last-child ul li div span{color: rgba(214, 214, 214, 0.7);}
-.presentation2 > div:last-child ul li div a{color: #fafafa;}
+.presentation2 > div:last-child ul li div span{
+    color: rgba(214, 214, 214, 0.7);
+}
+
+.presentation2 > div:last-child ul li div a{
+    color: #fafafa;    
+}
+
 .presentation2 > div:last-child ul li ion-icon{
     color: #52dee5;
     padding: 12px;
@@ -134,15 +150,56 @@ ul{
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+
 .presentation2 > div:last-child > div{
     display: flex;
     justify-content: space-between;
     width: 66%;
     margin: 5vh 17% 5vh 17%;
 } 
-.presentation2 > div:last-child > div ion-icon{color: #d6d6d6;size: 18px;}
 
-.presentation > ion-icon{display: none;}
+.presentation2 > div a:hover ion-icon.whatsapp {
+    color:#25D366;
+    size: 18px;
+    transition: 0.5s;
+    font-size: 32px;
+    filter:drop-shadow(15px 10px 15px black);
+}
+.presentation2 > div a:hover ion-icon.mail {
+    color:#db4256;
+    size: 18px;
+    transition: 0.5s;
+    font-size: 32px;
+    filter:drop-shadow(15px 10px 15px black);
+}
+.presentation2 > div a:hover ion-icon.github {
+    color:#000000;
+    size: 18px;
+    transition: 0.5s;
+    font-size: 32px;
+    filter:drop-shadow(15px 10px 15px black);
+}
+.presentation2 > div a:hover ion-icon.instagram {
+    color:#C13584;
+    size: 18px;
+    transition: 0.5s;
+    font-size: 32px;
+    filter:drop-shadow(15px 10px 15px black);
+}
+.presentation2 > div a:hover ion-icon.linkedin {
+    color:#0077B5;
+    size: 18px;
+    transition: 0.5s;
+    font-size: 32px;
+    filter:drop-shadow(15px 10px 15px black);
+}
+.presentation > ion-icon{
+    display: none;
+}
+.ban{
+    box-shadow: 0 5px 15px rgba(0, 0, 10, 0.5);
+}
 /*-----------------------------------about---------------------------------------*/
 .boxes{
     width: auto;
@@ -435,6 +492,12 @@ ul{
         size: 18px;
         font-weight: 400;
     }
+    .presentation2 > div a:hover ion-icon.linkedin, 
+    .presentation2 > div a ion-icon.mail.active{
+        color:#0077B5;
+        size: 18px;
+        transition: 0.5s;
+    }    
 
     .presentation > ion-icon{
         display: flex;
