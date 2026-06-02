@@ -1,14 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fira+Code&family=Inspiration&family=Inter:wght@300&family=Montserrat:wght@700&family=PT+Mono&family=Poppins:wght@300&family=Roboto:wght@300&family=Shadows+Into+Light&family=Sora:wght@300;400;600;800&display=swap');
-/*fira-code*/
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fira+Code:wght@300;400&family=Inspiration&family=Inter:wght@300&family=Montserrat:wght@700&family=PT+Mono&family=Poppins:wght@300&family=Roboto:wght@300&family=Shadows+Into+Light&family=Sora:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Poppins:wght@300&display=swap');
 
 .loader {
     position: fixed;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 100vw;
     height: 100vh;
     z-index: 9999;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader-spinner {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid rgba(82, 222, 229, 0.15);
+    border-top-color: #52dee5;
+    animation: loaderSpin 0.8s linear infinite;
+}
+@keyframes loaderSpin {
+    to { transform: rotate(360deg); }
 }
 html{
     box-sizing: border-box;
@@ -74,6 +87,8 @@ ul{
     border: 1px solid rgba(255, 255, 255, 0.08);
     position: sticky;
     top: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .presentation2 > div:first-child{
@@ -88,14 +103,15 @@ ul{
     width: 10vw;
     height: 10vw;
     border-radius: 12%;
-    object-fit: contain, cover; /* Ajuste del tamaño de la imagen */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Somra blanca en todas las direcciones */
-    transition: all 0.4s ease-out;
+    object-fit: cover;
+    animation: pulseGlow 3s ease-in-out infinite;
+    transition: transform 0.4s ease-out;
 }
 
 .presentation2 > div:first-child img:hover {
     transform: scale(1.1);
-    box-shadow: 10px 10px 15px rgba(0, 0, 10, 0.4); /* Sombra hacia abajo y hacia la derecha en hover */
+    animation-play-state: paused;
+    box-shadow: 0 0 30px rgba(82, 222, 229, 0.6), 0 0 0 4px rgba(82, 222, 229, 0.2);
 }
 
 .presentation2 > div:first-child div h1,.presentation2 > div:first-child div p{
@@ -212,12 +228,17 @@ ul{
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 5vh 2.4vw;
+    animation: fadeInSection 0.35s ease both;
 }
 
 .aboutme .h11, .projects > h1, .contact > h1{
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 28px;
+    background: linear-gradient(135deg, #52dee5 10%, #fafafa 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 .aboutme > div, .projects .div, .contact > div:first-child{
     width: 45px;
@@ -225,12 +246,19 @@ ul{
     border-radius: 2px;
     background: #52dee5;
     margin: 3vh 0;
+    animation: expandAccent 0.6s ease both;
 }
 .aboutme .h12{
     color: #d6d6d6;
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
+}
+.aboutme .h12.typing{
+    display: inline-block;
+    border-right: 2px solid #52dee5;
+    padding-right: 3px;
+    animation: caretBlink 0.7s step-end infinite;
 }
 .aboutme p{
     margin-bottom: 2vh;
@@ -255,8 +283,26 @@ ul{
 .boxes .menu a{
     padding: 19px 0;
     font-size: 15px;
-    font-weight:bolder;
+    font-weight: bolder;
     color: rgba(214, 214, 214, 0.8);
+    position: relative;
+    transition: color 0.25s ease;
+}
+.boxes .menu a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #52dee5;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px rgba(82, 222, 229, 0.6);
+}
+.boxes .menu a:hover::after, .boxes .menu a.active::after{
+    width: 60%;
 }
 .boxes .menu a:hover, .boxes .menu a.active{
     color: #52dee5;
@@ -293,6 +339,12 @@ ul{
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.06);/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill > div > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .skill > div > div img{
@@ -335,16 +387,12 @@ ul{
     display: flex;
     margin: 0 2%;
     flex-wrap: nowrap;
-    white-space: nowrap; /* Asegura que los elementos no se envuelvan */
-    animation: scroll 30s linear infinite; /* Animación de desplazamiento */
+    white-space: nowrap;
+    animation: scrollTech 30s linear infinite;
 }
-@keyframes scroll {
-    0% {
-        transform: translateX(0); /* Comienza desde la posición original */
-    }
-    100% {
-        transform: translateX(-100%); /* Desplazamiento total */
-    }
+@keyframes scrollTech {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
 }
 
 .technologies div div {
@@ -352,8 +400,8 @@ ul{
     flex-direction: column;
     align-items: center;
     gap: 2.5vh;
-    animation: scroll 1000s linear infinite;
-    width: 200%; /* Doble del tamaño para permitir un desplazamiento continuo */
+    animation: scrollTech 1000s linear infinite;
+    width: 200%;
     margin: 0 2%;
     flex-wrap: nowrap;
     white-space: nowrap;
@@ -361,14 +409,6 @@ ul{
 
 .technologies div div img {
     width: 90px;
-}
-@keyframes scroll {
-    from {
-        transform: translateX(0); /* Comienza desde la posición original */
-    }
-    to {
-        transform: translateX(-100%); /* Desplazamiento total */
-    }
 }
 
 /* Este estilo es opcional y solo se aplica al primer logotipo */
@@ -406,6 +446,23 @@ ul{
     background: #55cde8;
 }
 
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(82, 222, 229, 0.25), 0 0 0 3px rgba(82, 222, 229, 0.12); }
+    50%       { box-shadow: 0 0 22px rgba(82, 222, 229, 0.5),  0 0 0 5px rgba(82, 222, 229, 0.18); }
+}
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes expandAccent {
+    from { width: 0; opacity: 0; }
+    to   { width: 45px; opacity: 1; }
+}
+@keyframes caretBlink {
+    from, to { border-color: transparent; }
+    50%       { border-color: #52dee5; }
+}
 
 @media (max-width: 1250px) and (min-width: 1000px){
     .presentation2 > div:last-child ul li:first-child a{

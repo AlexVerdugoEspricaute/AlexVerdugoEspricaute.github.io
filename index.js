@@ -24,6 +24,23 @@ window.addEventListener('scroll', function()  {
 });
 
 
+// -----------------Typewriter-----------------
+const h12 = document.querySelector('.h12');
+if (h12) {
+    const originalText = h12.textContent;
+    h12.textContent = '';
+    h12.classList.add('typing');
+    let i = 0;
+    const typeTimer = setInterval(() => {
+        h12.textContent += originalText[i];
+        i++;
+        if (i >= originalText.length) {
+            clearInterval(typeTimer);
+            setTimeout(() => h12.classList.remove('typing'), 2000);
+        }
+    }, 75);
+}
+
 // -----------------Menu-----------------
 
 var btnContainer = document.querySelector(".menu");  

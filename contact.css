@@ -70,9 +70,9 @@
 
 /* Estilos para dispositivos con un ancho máximo de 480px */
 @media (max-width: 480px) {
-    .contact > h2,h1,p {
-        font-size: 16px; /* Tamaño de fuente reducido para dispositivos móviles */
-        font-weight: 700; /* Grosor de la fuente */
+    .contact > h2, .contact h1, .contact p {
+        font-size: 16px;
+        font-weight: 700;
         text-align: center;
     }
     
