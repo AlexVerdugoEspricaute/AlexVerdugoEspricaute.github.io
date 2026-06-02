@@ -93,6 +93,33 @@ btns[3].addEventListener("click", function (){
   about.style.setProperty("display", "none");
 })
 
+// -----------------Scroll progress bar-----------------
+const progressBar = document.getElementById('progress-bar');
+if (progressBar) {
+    window.addEventListener('scroll', function() {
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        progressBar.style.width = scrolled + '%';
+    });
+}
+
+// -----------------Timeline slide-in-----------------
+const timelineCards = document.querySelectorAll('.education > div:last-child > div, .experience > div:last-child > div');
+timelineCards.forEach(function(card) {
+    card.classList.add('slide-in-hidden');
+});
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('slide-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    timelineCards.forEach(function(card) { observer.observe(card); });
+}
+
+
 
 
 

@@ -43,6 +43,8 @@ body{
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to top, #434343, #000000);
+    background-size: 28px 28px, 100% 100%;
 }
 body::-webkit-scrollbar {
     width: 12px;         
@@ -367,6 +369,48 @@ ul{
 }
 
 /*----------------------circulos----------------------*/
+.skill > div > div > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 10px;
+    display: flex;
+    gap: 5px;
+    z-index: 1;
+}
+.skill > div > div > div span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.span1 { background: #FF5F56; }
+.span2 { background: #FFBD2E; }
+.span3 { background: #27C93F; }
+
+/*-------------------------------scroll progress bar--------------------------------*/
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #52dee5;
+    z-index: 99999;
+    width: 0%;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 8px #52dee5;
+}
+
+/*-------------------------------timeline slide-in--------------------------------*/
+.slide-in-hidden {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.slide-in {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
 
 /*-------------------------------technologies--------------------------------*/
 .technologies {
