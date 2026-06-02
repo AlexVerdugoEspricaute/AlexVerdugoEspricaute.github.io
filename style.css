@@ -433,6 +433,11 @@ ul{
     flex-wrap: nowrap;
     white-space: nowrap;
     animation: scrollTech 30s linear infinite;
+    cursor: grab;
+    user-select: none;
+}
+.technologies > div.is-dragging {
+    cursor: grabbing;
 }
 @keyframes scrollTech {
     from { transform: translateX(0); }

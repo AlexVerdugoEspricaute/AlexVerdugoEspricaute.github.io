@@ -102,6 +102,74 @@ if (progressBar) {
     });
 }
 
+// -----------------Tech Carousel Drag-----------------
+(function() {
+    var track = document.querySelector('.technologies > div');
+    if (!track) return;
+
+    var isDragging = false;
+    var startX = 0;
+    var startTranslate = 0;
+    var ANIM_DURATION = 30;
+
+    function getTranslateX() {
+        var t = window.getComputedStyle(track).transform;
+        if (!t || t === 'none') return 0;
+        return new DOMMatrix(t).m41;
+    }
+
+    function restoreAnim() {
+        var finalX   = getTranslateX();
+        var trackW   = track.offsetWidth;
+        var clamped  = Math.max(-trackW, Math.min(0, finalX));
+        var delay    = -((Math.abs(clamped) / trackW) * ANIM_DURATION);
+        track.style.transform = '';
+        track.style.animation = 'scrollTech ' + ANIM_DURATION + 's linear ' + delay + 's infinite';
+    }
+
+    // Hover pause / resume
+    track.addEventListener('mouseenter', function() {
+        if (!isDragging) track.style.animationPlayState = 'paused';
+    });
+    track.addEventListener('mouseleave', function() {
+        if (!isDragging) track.style.animationPlayState = 'running';
+    });
+
+    // Mouse drag
+    track.addEventListener('mousedown', function(e) {
+        if (e.button !== 0) return;
+        isDragging    = true;
+        startX        = e.clientX;
+        startTranslate = getTranslateX();
+        track.style.animation = 'none';
+        track.style.transform = 'translateX(' + startTranslate + 'px)';
+        track.classList.add('is-dragging');
+        e.preventDefault();
+    });
+    document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        track.style.transform = 'translateX(' + (startTranslate + e.clientX - startX) + 'px)';
+    });
+    document.addEventListener('mouseup', function() {
+        if (!isDragging) return;
+        isDragging = false;
+        track.classList.remove('is-dragging');
+        restoreAnim();
+    });
+
+    // Touch drag
+    track.addEventListener('touchstart', function(e) {
+        startX        = e.touches[0].clientX;
+        startTranslate = getTranslateX();
+        track.style.animation = 'none';
+        track.style.transform = 'translateX(' + startTranslate + 'px)';
+    }, { passive: true });
+    track.addEventListener('touchmove', function(e) {
+        track.style.transform = 'translateX(' + (startTranslate + e.touches[0].clientX - startX) + 'px)';
+    }, { passive: true });
+    track.addEventListener('touchend', restoreAnim);
+})();
+
 // -----------------Timeline slide-in-----------------
 const timelineCards = document.querySelectorAll('.education > div:last-child > div, .experience > div:last-child > div');
 timelineCards.forEach(function(card) {
